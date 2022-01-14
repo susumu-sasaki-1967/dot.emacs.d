@@ -865,7 +865,7 @@
 		   (:authors
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx")))])
  (emms .
-       [(7 8)
+       [(8)
 	((cl-lib
 	  (0 5))
 	 (nadvice
@@ -1442,7 +1442,7 @@
 	      (:authors
 	       ("J.D. Smith" . "jdtsmith@gmail.com")))])
  (kiwix .
-	[(1 1 4)
+	[(1 1 5)
 	 ((emacs
 	   (25 1))
 	  (request
@@ -1759,7 +1759,7 @@
 		(:keywords "convenience" "org-mode" "org-agenda")
 		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nano-modeline .
-		[(0 4)
+		[(0 5)
 		 ((emacs
 		   (27 1)))
 		 "N Λ N O modeline" tar
@@ -2888,7 +2888,7 @@
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (vertico-posframe .
-		   [(0 4 5)
+		   [(0 4 7)
 		    ((emacs
 		      (26 0))
 		     (posframe

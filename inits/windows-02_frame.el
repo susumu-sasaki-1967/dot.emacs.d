@@ -6,6 +6,7 @@
 ;;	       '(top . 0)
 ;;	       '(left . 0)
 ;;	       '(font . "VL Gothic-11")
+	       '(font . "Migu 1M-11:antialias=standard")
 	       )
 	      initial-frame-alist))
 

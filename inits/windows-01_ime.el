@@ -31,3 +31,37 @@
               (w32-ime-composition-window (minibuffer-window)))
            (deactivate-input-method)
            (apply orig-fun args))))
+
+
+;; IME無効／有効時のカーソルカラー定義
+(unless (facep 'cursor-ime-off)
+  (make-face 'cursor-ime-off)
+  (set-face-attribute 'cursor-ime-off nil
+                      :background "DarkRed" :foreground "White")
+  )
+(unless (facep 'cursor-ime-on)
+  (make-face 'cursor-ime-on)
+  (set-face-attribute 'cursor-ime-on nil
+                      :background "DarkGreen" :foreground "White")
+  )
+
+;; IME無効／有効時のカーソルカラー設定
+(advice-add 'ime-force-on
+            :before (lambda (&rest args)
+                      (if (facep 'cursor-ime-on)
+                          (let ( (fg (face-attribute 'cursor-ime-on :foreground))
+                                 (bg (face-attribute 'cursor-ime-on :background)) )
+                            (set-face-attribute 'cursor nil :foreground fg :background bg) )
+                        )
+                      ))
+(advice-add 'ime-force-off
+            :before (lambda (&rest args)
+                      (if (facep 'cursor-ime-off)
+                          (let ( (fg (face-attribute 'cursor-ime-off :foreground))
+                                 (bg (face-attribute 'cursor-ime-off :background)) )
+                            (set-face-attribute 'cursor nil :foreground fg :background bg) )
+                        )
+                      ))
+
+;; バッファ切り替え時の状態引継ぎ設定（有効：t、無効：nil）
+(setq w32-ime-buffer-switch-p t)

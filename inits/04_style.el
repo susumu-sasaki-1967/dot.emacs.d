@@ -1,3 +1,4 @@
+
 ;; 対応するカッコを強調表示
 (show-paren-mode t)
 
@@ -28,4 +29,10 @@
 (setq-default truncate-lines t)
 ;; ウィンドウを左右に分割したとき用の設定
 (setq-default truncate-partial-width-windows t)
+
+
+;; 共通のタブ設定
+(setq-default tab-width 4)
+;; タブにスペースを使用する
+(setq-default tab-width 4 indent-tabs-mode nil)
 
