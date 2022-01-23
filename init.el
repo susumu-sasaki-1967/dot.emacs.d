@@ -1,3 +1,8 @@
+
+
+;; package install
+;;   M-x package-list-packages
+
 ;;
 ;; hostごとの設定があれば読み込む
 ;;

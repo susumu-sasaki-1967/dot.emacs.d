@@ -2,9 +2,11 @@
 ;; asciidoc-mode の設定
 ;;
 ;; M-x package-list-package
-;; C-s markdown-mode
+;; C-s adoc-mode
 
-(setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
-;; (setq auto-mode-alist
-;;       (append '(("\\.md$" . yatex-mode)
-;;                 ("\\.txt$" . yatex-mode)) auto-mode-alist))
+(autoload 'adoc-mode "adoc-mode" nil t)
+
+(require 'adoc-mode)
+
+(add-to-list
+ 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
