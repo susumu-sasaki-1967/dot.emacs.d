@@ -3,10 +3,10 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
 ;; 大文字・小文字を区別しないでサーチ（有効：t、無効：nil）
-(setq-default case-fold-search nil)
+(setq-default case-fold-search t)
 
 ;; インクリメント検索時に縦スクロールを有効化（有効：t、無効：nil）
-(setq isearch-allow-scroll nil)
+(setq isearch-allow-scroll t)
 
 ;; C-dで検索文字列を一文字削除
 (define-key isearch-mode-map (kbd "C-d") 'isearch-delete-char)
