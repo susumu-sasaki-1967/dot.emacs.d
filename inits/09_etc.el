@@ -44,12 +44,13 @@
 
 
 
-;; 行番号の書式
-(defvar linum-format nil)
-(setq linum-format "%5d")
+;; ;; 行番号の書式
+;; (defvar linum-format nil)
+;; (setq linum-format "%5d")
 
 ;; バッファ中の行番号表示（有効：t、無効：nil）
-(global-linum-mode t)
+;; (global-linum-mode t)
+(display-line-numbers-mode)
 
 ;; 文字サイズ
 (set-face-attribute 'linum nil :height 0.75)
