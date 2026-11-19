@@ -16,9 +16,9 @@
   )
 
 (unless window-system                     ; CUI時
-;;  (load-theme 'manoj-dark t)
+ (load-theme 'manoj-dark t)
 ;;  (load-theme 'dark-blue t)
-  (load-theme 'deep-blue t)
+;; (load-theme 'deep-blue t)
 
   ;; 現在行を下線
   (setq hl-line-face 'underline)	  ; 現在行をアンダーライン

@@ -3,9 +3,12 @@
 (show-paren-mode t)
 
 ;; 行番号を常に表示させる
-(global-linum-mode)
+;; (global-linum-mode)
+(global-display-line-numbers-mode t)
+(custom-set-variables '(display-line-numbers-width-start t))
 (setq linum-format "%4d ")
 ;;(column-number-mode t)               ; 行番号と列番号を表示する
+
 
 ;; 時間も表示させる。
 ;;(display-time)
