@@ -53,5 +53,6 @@
 (display-line-numbers-mode)
 
 ;; 文字サイズ
-(set-face-attribute 'linum nil :height 0.75)
+(with-eval-after-load 'linum
+  (set-face-attribute 'linum nil :height 0.75))
 
