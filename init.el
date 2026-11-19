@@ -1,7 +1,12 @@
-
-
 ;; package install
 ;;   M-x package-list-packages
+
+;;  »  Warning (files): Missing ‘lexical-binding’ cookie in "~/.emacs.d/init.el".
+;; You can add one with ‘M-x elisp-enable-lexical-binding RET’.
+;; See ‘(elisp)Selecting Lisp Dialect’ and ‘(elisp)Converting to Lexical Binding’
+;; for more information.
+(when (require 'warnings nil t)
+  (add-to-list 'warning-suppress-log-types '(files missing-lexbind-cookie)))
 
 ;;
 ;; hostごとの設定があれば読み込む
